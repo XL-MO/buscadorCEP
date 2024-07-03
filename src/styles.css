@@ -1,0 +1,106 @@
+/* Estilização do container principal */
+.container {
+    height: 100vh; /* Altura de 100% da tela */
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Coloca os itens em coluna */
+    background: linear-gradient(#121212, #212b46); /* Fundo com gradiente */
+}
+
+/* Estilização do título */
+.title {
+    font-size: 85px; 
+    color: #FFF; 
+    animation: flipTitle 2s; /* Animação de flip */
+}
+
+/* Animação do título */
+@keyframes flipTitle {
+    from {
+        transform: rotateX(90deg); /* Inicia com rotação X de 90 graus */
+    }
+    to {
+        transform: rotateX(0deg); /* Termina sem rotação */
+    }
+}
+
+/* Estilização do container do input */
+.containerInput {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo branco semi-transparente */
+    padding: 15px; /* Espaçamento interno */
+    margin: 34px 0; /* Espaçamento externo superior e inferior */
+    display: flex; /* Utiliza flexbox para layout */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+/* Estilização do input */
+.containerInput input {
+    background-color: transparent; /* Fundo transparente */
+    border: 0; /* Sem borda */
+    font-size: 20px; /* Tamanho da fonte */
+    color: #FFF; /* Cor branca */
+    outline: none; /* Remove outline padrão */
+    margin-right: 8px; /* Margem direita */
+}
+
+/* Estilização do placeholder do input */
+.containerInput input::placeholder {
+    color: #FFF; /* Cor branca */
+}
+
+/* Estilização do botão de busca */
+.buttonSearch {
+    background-color: transparent; /* Fundo transparente */
+    border: 0; /* Sem borda */
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    transition: transform 0.5s; /* Transição suave para transformações */
+}
+
+/* Efeito hover no botão de busca */
+.buttonSearch:hover {
+    transform: scaleX(1.2); /* Aumenta a largura em 1.2 vezes */
+}
+
+/* Estilização do main, que exibe os dados do CEP */
+.main {
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Coloca os itens em coluna */
+    background-color: #FFF; /* Fundo branco */
+    width: 500px; /* Largura fixa */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilização do título dentro do main */
+.main h2 {
+    margin: 16px 0; /* Margem superior e inferior */
+    font-size: 39px; /* Tamanho da fonte */
+}
+
+/* Estilização dos spans dentro do main */
+.main span {
+    margin-bottom: 16px; /* Margem inferior */
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilizações para telas menores (responsivo) */
+@media(max-width: 620px) {
+    .title {
+        font-size: 60px; /* Reduz o tamanho da fonte do título */
+    }
+
+    .main h2 {
+        font-size: 28px; /* Reduz o tamanho da fonte do título dentro do main */
+    }
+
+    .main {
+        width: 80%; /* Aumenta a largura para 80% do contêiner */
+        min-height: 250px; /* Altura mínima do main */
+    }
+}
